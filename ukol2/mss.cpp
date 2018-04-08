@@ -93,7 +93,6 @@ int main(int argc, char *argv[]){
     sort(processorNumbers.begin(), processorNumbers.end());     //sort your own numbers before connecting with your neighbour
 
     for(int step = 0; step <= iterationSteps + 2; step++){      // + 2 for preparation steps
-        if (processorID >= numberOfProcessors) break;
         if((step % 2) == 1){              //step 1
             if((processorID % 2) == 0){     // in step 1 only processors with id 0,2,4,.. are sending first
                 if(processorID != (numberOfProcessors - 1)){          //if i am not the most right one i slack
